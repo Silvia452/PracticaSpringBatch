@@ -1,7 +1,6 @@
 # PracticaSpringBatch
 
-This app was created with Bootify.io - tips on working with the code [can be found here](https://bootify.io/next-steps/).
-Feel free to contact us for further questions.
+Link al repositorio: https://github.com/Silvia452/PracticaSpringBatch
 
 ## Development
 

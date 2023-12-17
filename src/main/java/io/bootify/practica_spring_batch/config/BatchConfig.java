@@ -11,6 +11,7 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
+import org.springframework.batch.core.repository.support.JobRepositoryFactoryBean;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.data.RepositoryItemWriter;
@@ -92,7 +93,7 @@ public class BatchConfig {
 
     @Bean
     public Step step(ItemReader<Transacciones> reader, ItemProcessor<Transacciones, Transacciones> processor, ItemWriter<Transacciones> writer) {
-        return new StepBuilder("transaccionesStep")
+        return new StepBuilder("csv-step", jobRepository)
                 .<Transacciones, Transacciones>chunk(10, transactionManager)
                 .reader(reader)
                 .processor(processor)
@@ -104,7 +105,7 @@ public class BatchConfig {
 
     @Bean
     public Job runJob(Step step) {
-        return new JobBuilder("transacciones.csv", jobRepository)
+        return new JobBuilder("import-transacciones", jobRepository)
                 .start(step)
                 .build();
     }

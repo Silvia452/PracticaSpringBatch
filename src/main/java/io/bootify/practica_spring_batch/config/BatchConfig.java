@@ -1,6 +1,5 @@
 package io.bootify.practica_spring_batch.config;
 
-
 import io.bootify.practica_spring_batch.model.TransaccionesDTO;
 import io.bootify.practica_spring_batch.domain.Transacciones;
 import io.bootify.practica_spring_batch.repos.TransaccionesRepository;
@@ -26,7 +25,6 @@ import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 
 import javax.sql.DataSource;
-
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.core.io.FileSystemResource;

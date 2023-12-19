@@ -4,7 +4,7 @@ import io.bootify.practica_spring_batch.domain.Transacciones;
 import io.bootify.practica_spring_batch.repos.TransaccionesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-/*import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Configuration;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -61,4 +61,3 @@ public class NonBatchConfig {
 
 }
 
-*/

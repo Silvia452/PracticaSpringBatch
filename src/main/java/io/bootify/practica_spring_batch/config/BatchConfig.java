@@ -1,5 +1,5 @@
 package io.bootify.practica_spring_batch.config;
-
+/*
 import io.bootify.practica_spring_batch.model.TransaccionesDTO;
 import io.bootify.practica_spring_batch.domain.Transacciones;
 import io.bootify.practica_spring_batch.repos.TransaccionesRepository;
@@ -117,5 +117,5 @@ public class BatchConfig {
 }
 
 
-
+*/
 
